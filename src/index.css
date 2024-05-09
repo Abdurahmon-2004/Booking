@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url(https://fonts.googleapis.com/css2?family=Poller+One&display=swap); */
+
+/* @import url(https://fonts.googleapis.com/css2?family=Poller+One&display=swap); */
+
+.Logo {
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* nav {
+  background: rgb(150, 193, 233);
+  background: radial-gradient(
+    circle,
+    rgba(150, 193, 233, 1) 32%,
+    rgba(65, 144, 190, 1) 100%
+  );
+} */
