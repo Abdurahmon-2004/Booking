@@ -62,12 +62,14 @@ function Signup() {
     console.log(password)
 
     try {
+      toast.loading("Please wait...")
       const req = await fetch(
         `http://18.185.248.114:8080/v1/users/verify?code=${password}&email=${encodeURIComponent(
           mail
         )}`
       )
       const res = await req.json()
+      toast.dismiss()
       if (res.role === "user") {
         toast.success("Successfully signup")
         navigate("/")
