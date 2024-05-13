@@ -69,6 +69,7 @@ function Signup() {
       )
       const res = await req.json()
       if (res.role === "user") {
+        toast.success("Successfully signup")
         navigate("/")
         dispatch(setUserData(res))
         return res
