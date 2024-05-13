@@ -37,11 +37,11 @@ export default function App() {
     },
     {
       path: "/login",
-      element: <Login />,
+      element: userData ? <Navigate to={"/"} /> : <Login />,
     },
     {
       path: "/signup",
-      element: <Signup />,
+      element: userData ? <Navigate to={"/"} /> : <Signup />,
     },
   ])
   return <RouterProvider router={routest} />

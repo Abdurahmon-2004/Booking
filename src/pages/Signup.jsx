@@ -3,6 +3,7 @@ import {Link, useNavigate} from "react-router-dom"
 import FormInput from "../components/FormInput"
 import {useDispatch} from "react-redux"
 import {setUserData} from "../redux/user/userSlice"
+import {toast} from "sonner"
 
 function Signup() {
   const [loading, setLoading] = useState(false)
@@ -67,8 +68,13 @@ function Signup() {
         )}`
       )
       const res = await req.json()
-      return res
+      if (res.role === "user") {
+        navigate("/")
+        dispatch(setUserData(res))
+        return res
+      }
     } catch (error) {
+      toast.error(error.message)
       console.log(error)
     }
   }
