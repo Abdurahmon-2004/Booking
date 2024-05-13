@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom"
 
 export default function Header() {
   return (
@@ -23,14 +23,17 @@ export default function Header() {
               </li>
             </ul>
 
-            <li className="h-[50px] w-[100px] justify-center cursor-pointer items-center flex  text-[20px] border">
+            <Link
+              to={"/login"}
+              className="h-[50px] w-[100px] justify-center cursor-pointer items-center flex  text-[20px] border"
+            >
               Login
-            </li>
+            </Link>
           </ul>
         </nav>
       </header>
     </div>
-  );
+  )
 }
 
 // <ul>
